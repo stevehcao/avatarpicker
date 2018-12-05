@@ -14,6 +14,7 @@ class AvatarPicker extends Component {
     });
 
     this.setState({ avatar: chosen.src });
+    this.toggleModal();
   };
 
   toggleModal = () => {
@@ -33,6 +34,7 @@ class AvatarPicker extends Component {
           <AvatarModal
             avatars={avatars}
             changeAvatar={id => this.changeAvatar(id)}
+            toggleModal={this.toggleModal}
           />
         ) : (
           <div />
