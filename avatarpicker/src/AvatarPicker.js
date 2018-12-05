@@ -24,11 +24,12 @@ class AvatarPicker extends Component {
   render() {
     const { avatars } = this.props;
     return (
-      <div>
+      <div className="AvatarPicker">
         <img
           alt="current avatar"
           src={this.state.avatar}
           onClick={this.toggleModal}
+          className="currentAvatar"
         />
         {this.state.modalOpen ? (
           <AvatarModal
