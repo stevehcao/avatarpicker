@@ -6,7 +6,9 @@ class AvatarPic extends Component {
 
     return (
       <img
-        className="avatarPic"
+        className={`avatarPic ${
+          this.props.isCurrentAvatar ? 'currentAvatar' : ''
+        }`}
         alt="avatar"
         src={src}
         // had to remove id from (id) in below arrow function to avoid id referring to click event

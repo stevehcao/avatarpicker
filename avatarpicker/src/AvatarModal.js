@@ -11,15 +11,18 @@ class AvatarModal extends Component {
     const { avatars, changeAvatar } = this.props;
 
     return (
-      <div className="modal">
+      <div className="modal arrow_box">
         <h2>Choose your avatar</h2>
-        {avatars.map(avatar => (
-          <AvatarPic
-            src={avatar.src}
-            id={avatar.id}
-            changeAvatar={id => changeAvatar(id)}
-          />
-        ))}
+        <div className="avatarList">
+          {avatars.map(avatar => (
+            <AvatarPic
+              src={avatar.src}
+              id={avatar.id}
+              changeAvatar={id => changeAvatar(id)}
+              isCurrentAvatar={this.props.currentAvatar.id === avatar.id}
+            />
+          ))}
+        </div>
       </div>
     );
   }

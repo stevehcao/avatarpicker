@@ -6,15 +6,66 @@ img {
 
 .currentAvatar {
   border: 1px solid transparent;
+  margin-bottom: 10px;
 }
 
-.currentAvatar:hover {
+.currentAvatar:hover,
+.currentAvatar:focus {
   border: 1px solid rgb(155, 160, 163);
-
-  /* border: 10px red solid; */
 }
 
 .AvatarPicker {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+  border-radius: 2px;
+  background-color: rgb(44, 48, 51);
+  filter: drop-shadow(2px 2px 10px rgb(102, 102, 102));
+  padding: 14px;
+}
+
+.avatarList {
+}
+
+.avatarPic {
+  border: 3px solid transparent;
+  margin: 7px;
+}
+
+.avatarPic:hover,
+.avatarPic:focus {
+  border: 3px solid rgb(155, 160, 163);
+  filter: opacity(80%);
+}
+
+.arrow_box {
+  position: relative;
+  background: #2c3033;
+}
+.arrow_box:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(44, 48, 51, 0);
+  border-bottom-color: #2c3033;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.avatarPic.currentAvatar {
+  border: 3px solid rgb(122, 161, 178);
 }

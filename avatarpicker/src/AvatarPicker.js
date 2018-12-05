@@ -4,7 +4,7 @@ import AvatarModal from './AvatarModal';
 
 class AvatarPicker extends Component {
   state = {
-    avatar: this.props.avatars[0].src,
+    avatar: this.props.avatars[0],
     modalOpen: false
   };
 
@@ -13,7 +13,7 @@ class AvatarPicker extends Component {
       return id === avatar.id;
     });
 
-    this.setState({ avatar: chosen.src });
+    this.setState({ avatar: chosen });
     this.toggleModal();
   };
 
@@ -27,7 +27,7 @@ class AvatarPicker extends Component {
       <div className="AvatarPicker">
         <img
           alt="current avatar"
-          src={this.state.avatar}
+          src={this.state.avatar.src}
           onClick={this.toggleModal}
           className="currentAvatar"
         />
@@ -36,6 +36,7 @@ class AvatarPicker extends Component {
             avatars={avatars}
             changeAvatar={id => this.changeAvatar(id)}
             toggleModal={this.toggleModal}
+            currentAvatar={this.state.avatar}
           />
         ) : (
           <div />
