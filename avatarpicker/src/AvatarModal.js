@@ -7,6 +7,7 @@ class AvatarModal extends Component {
 
     return (
       <div className="modal">
+        <h2>Choose your avatar</h2>
         {avatars.map(avatar => (
           <AvatarPic
             src={avatar.src}
