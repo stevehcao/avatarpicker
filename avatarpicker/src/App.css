@@ -30,7 +30,7 @@ img {
   border-radius: 2px;
   background-color: rgb(44, 48, 51);
   filter: drop-shadow(2px 2px 10px rgb(102, 102, 102));
-  padding: 14px;
+  padding: 14px 11px;
 }
 
 .avatarList {
@@ -38,7 +38,16 @@ img {
 
 .avatarPic {
   border: 3px solid transparent;
-  margin: 7px;
+  margin: 2px;
+}
+
+.avatarPic:nth-child(4n + 1) {
+  margin-left: 0;
+}
+
+.avatarPic:nth-child(4n + 4) {
+  border: 3px solid transparent;
+  margin-right: 0;
 }
 
 .avatarPic:hover,
@@ -68,4 +77,11 @@ img {
 
 .avatarPic.currentAvatar {
   border: 3px solid rgb(122, 161, 178);
+}
+
+.modalHeader {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(249, 249, 249);
+  size: 16px;
+  margin: 14px 0;
 }

@@ -12,7 +12,7 @@ class AvatarModal extends Component {
 
     return (
       <div className="modal arrow_box">
-        <h2>Choose your avatar</h2>
+        <div className="modalHeader">Choose your avatar</div>
         <div className="avatarList">
           {avatars.map(avatar => (
             <AvatarPic
